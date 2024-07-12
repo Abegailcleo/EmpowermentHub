@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+  </head>
+
+  <body>
+    <p>Sharing your story will help us gain more knowledge about the needs,
+      <br>
+      challenges, and behaviors of South African residents regarding poverty
+      <br>and unemployment.
+      <br>
+      <br>
+      Fill in the short form below to bring us closer to our goals.
+    </p>
+    <form>
+      <Label>What is your current occupation?</Label>
+      <select id='occupation' name="occupation" value='...' required>
+        <option value="student">Student</option>
+        <option value="unemployed">Unemployed</option>
+        <option value="employed_fultime">Employed Fulltime</option>
+        <option value="employed_parttime">Employed Parttime</option>
+        <option value="freelancer">Freelancer</option>
+        <option value="business owner">Business Owner</option>
+      </select>
+      <Label for="highest_grade_completed">Tell us more about your educational background</Label>
+      <select id='highest_grade_completed' name="highest_grade_completed" value='...' required>
+        <option value="matric">National Senior Certificate</option>
+        <option value="certificate">Higher Certificate</option>
+        <option value="diploma">Diploma</option>
+        <option value="university">University</option>
+        <option value="some_college">Some College</option>
+      </select>
+      <Label>What are primary challenges?</Label>
+      <input id='primary_challenges' value='e.g. I am having difficulty finding employment...'>
+      <button type="submit">Submit</button>
+    </form>
+
+  </body>
+
+</html>
