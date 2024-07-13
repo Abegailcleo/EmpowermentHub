@@ -3,7 +3,8 @@
 import os
 import sys
 import django
-
+from django.http import HttpResponse
+from django.template import loader
 
 
 def main():
@@ -18,6 +19,8 @@ def main():
             "forget to activate a virtual environment?"
         ) from exc
     execute_from_command_line(sys.argv)
+
+
 
 
 if __name__ == '__main__':
