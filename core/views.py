@@ -8,6 +8,9 @@ from .serializers import UserSerializer
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
 
+def home(request):
+    return render(request, 'core/index.html')
+
 class JobListingViewSet(viewsets.ModelViewSet):
     queryset = JobListing.objects.all()
     serializer_class = JobListingSerializer
