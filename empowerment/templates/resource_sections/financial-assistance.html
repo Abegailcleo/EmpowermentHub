@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Financil Aid Request</title>
+</head>
+
+<body>
+    <h3>Financial Aid Request Form</h3>
+    <form>
+        <Label>Reason for application</Label>
+        <input id='application-reason' name="application-reason" placeholder='...' required>
+        <Label for="highest_grade_completed">Tell us more about your educational background</Label>
+        <select id='highest_grade_completed' name="highest_grade_completed" value='...' required>
+            <option value="matric">National Senior Certificate</option>
+            <option value="certificate">Higher Certificate</option>
+            <option value="diploma">Diploma</option>
+            <option value="university">University</option>
+            <option value="some_college">Some College</option>
+        </select>
+        <Label>What are primary challenges?</Label>
+        <input id='primary_challenges' value='e.g. I am having difficulty finding employment...'>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>

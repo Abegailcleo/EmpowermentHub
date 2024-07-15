@@ -1,19 +1,60 @@
-{% extends "base.html" %}
+<!-- {% extends "base.html" %} -->
 <!-- {% include 'navigation.html' %} -->
-<!-- {{}} -->
-{% block head %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- {% block head %} -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>South Africa Empowerment Hub </title>
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- {% endblock %} -->
+</head>
+<!-- {% block head %}
 {% block title %}<title>South Africa Empowerment Hub </title>{% endblock %}
-{% endblock %}
+{% endblock %} -->
 
-{% block body %}
+<body>
+    <!-- {% block body %} -->
+    <nav class="navigation">
+        <a href="..\templates\index.html"><button>Home</button></a>
+        <a href="..\templates\about.html"><button>About</button></a>
+        <a href="..\templates\login.html"><button>Resource Sections</button></a>
+        <!-- on click -->
+        <a href="..\empowerment\templates\resource_sections\job-listing.html">JobListing</a>
+        <a href="">EducationalResource</a>
+        <a href=""> FinancialAssistance</a>
+        <a href=""> CommunitySupport</a>
+        <a href="..\templates\login.html"><button>Login</button></a>
+        <!-- after successful login -->
+        <a></a>
+
+    </nav>
     <h1>Welcome to South Africa Empowerment Hub</h1>
-    <a href="..\front_end\user_research.html">
-        <button>Share your story</button>
-    </a>
-    <a href="..\front_end\user_research.html">
-        <button>Tell us about an opportunity</button>
-    </a>    
-{% endblock %}
 
-{% block footer%}
-{% endblock %}
+    <!--after login  -->
+    <!-- <a href="../templates/sign-up.html">
+    <button>Sign Up</button>
+</a>     
+<a href="../templates/login.html">
+    <button>Login</button>
+</a>  -->
+    <!--before login  -->
+
+    <!-- {% endblock %} -->
+</body>
+
+<!-- {% block footer%}
+{% endblock %} -->
+<footer>
+    <a href="../templates/user-research.html">
+        Share your story
+    </a>
+    <a href="../templates/opportunities.html">
+        Tell us about an opportunity
+    </a>
+</footer>
