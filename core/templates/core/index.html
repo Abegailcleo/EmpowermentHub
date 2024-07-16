@@ -1,50 +1,49 @@
-<!-- {% extends "core/base.html" %} -->
-<!-- {% include 'navigation.html' %} -->
+{% extends "base.html" %} {% include 'navigation.html' %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- {% block head %} -->
+    {% block head %}
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>South Africa Empowerment Hub</title>
-    <!-- Uncomment the Bootstrap link if you want to use Bootstrap
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+
     <link rel="stylesheet" href="index.css" />
-    <!-- {% endblock %} -->
+    {% endblock %}
   </head>
 
   <body>
-    <!-- {% block body %} -->
+    {% block body %}
     <nav class="navigation">
-      <a href="../templates/index.html"><button>Home</button></a>
-      <a href="../templates/about.html"><button>About</button></a>
-      <a href="../templates/login.html"><button>Resource Sections</button></a>
-      <a href="../empowerment/templates/resource_sections/job-listing.html"
-        ><button>Job Listing</button></a
-      >
+      <a href="../core/index.html"><button>Home</button></a>
+      <a href="../core/about.html"><button>About</button></a>
+      <a href="../core/login.html"><button>Resource Sections</button></a>
+      <a href="../core/job-listing.html"><button>Job Listing</button></a>
       <a href=""><button>Educational Resource</button></a>
       <a href=""><button>Financial Assistance</button></a>
       <a href=""><button>Community Support</button></a>
-      <a href="../templates/login.html"><button>Login</button></a>
+      <a href="../core/login.html"><button>Login</button></a>
     </nav>
     <h1>Welcome to South Africa Empowerment Hub</h1>
 
-    <!-- Uncomment the following sections as needed -->
-    <!-- After successful login 
-    <a href="../templates/sign-up.html">
-        <button>Sign Up</button>
+    After successful login
+    <a href="../core/sign-up.html">
+      <button>Sign Up</button>
     </a>
-    <a href="../templates/login.html">
-        <button>Login</button>
+    <a href="../core/login.html">
+      <button>Login</button>
     </a>
-    -->
 
-    <!-- {% endblock %} -->
+    {% endblock %}
 
     <footer>
-      <a href="../templates/user-research.html">Share your story</a>
-      <a href="../templates/opportunities.html">Tell us about an opportunity</a>
+      <a href="../core/user-research.html">Share your story</a>
+      <a href="../core/opportunities.html">Tell us about an opportunity</a>
     </footer>
   </body>
 </html>

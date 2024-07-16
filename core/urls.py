@@ -20,6 +20,8 @@ router.register(r'users', UserViewSet)
 
 urlpatterns = [
     path('', views.home, name='index'),  # Root URL of the core app is handled by 'home' view.
+    path('',views.homey, name ='home'),
+    path('about/', views.about, name='about'),
     path('', include(router.urls)),    
 
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),

@@ -1,4 +1,13 @@
-<nav>
-    <a href="..\templates\index.html"><button>Home</button></a>
-    <a href="..\templates\about.html"><button>About</button></a>
+<nav class="navigation">
+  <a href="{% url 'home' %}"><button>Home</button></a>
+  <a href="{% url 'about' %}"><button>About</button></a>
+  <a href="{% url 'job_listing' %}"><button>Job Listing</button></a>
+  <a href="{% url 'educational_resource' %}"
+    ><button>Educational Resource</button></a
+  >
+  <a href="{% url 'financial_assistance' %}"
+    ><button>Financial Assistance</button></a
+  >
+  <a href="{% url 'community_support' %}"><button>Community Support</button></a>
+  <a href="{% url 'login' %}"><button>Login</button></a>
 </nav>
