@@ -3,26 +3,91 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Financil Aid Request</title>
+    <title>Financial Aid Request</title>
+    <style>
+      body {
+        background-color: #f8f9fa;
+        color: #343a40;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      .navigation {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        padding: 20px;
+        background-color: #343a40;
+      }
+      .navigation a {
+        color: #ffffff;
+        text-decoration: none;
+      }
+      .navigation button {
+        background-color: #6c757d;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      .navigation button:hover {
+        background-color: #5a6268;
+      }
+      h3 {
+        text-align: center;
+        margin-top: 20px;
+      }
+      form {
+        max-width: 600px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+      label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+      input,
+      select {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 15px;
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+      }
+      button[type="submit"] {
+        background-color: #007bff;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+      }
+      button[type="submit"]:hover {
+        background-color: #0056b3;
+      }
+    </style>
   </head>
-
   <body>
     <nav class="navigation">
-      <a href="..\core\index.html"><button>Home</button></a>
-      <a href="..\core\about.html"><button>About</button></a>
-      <a href="..\core\login.html"><button>Resource Sections</button></a>
-      <!-- on click -->
-      <a href="..\core\job-listing.html">JobListing</a>
-      <a href="..\core\educational_resource.html">EducationalResource</a>
-      <a href=""> FinancialAssistance</a>
-      <a href=""> CommunitySupport</a>
-      <a href="..\templates\login.html"><button>Login</button></a>
-      <!-- after successful login -->
-      <a></a>
+      <a href="{% url 'index' %}"><button>Home</button></a>
+      <a href="{% url 'about' %}"><button>About</button></a>
+      <a href="{% url 'login' %}"><button>Resource Sections</button></a>
+      <a href="{% url 'job_listing' %}">Job Listing</a>
+      <a href="{% url 'educational_resource' %}">Educational Resource</a>
+      <a href="{% url 'financial_assistance' %}">Financial Assistance</a>
+      <a href="{% url 'community_support' %}">Community Support</a>
+      <a href="{% url 'login' %}"><button>Login</button></a>
     </nav>
     <h3>Financial Aid Request Form</h3>
     <form>
-      <label>Reason for application</label>
+      <label for="application-reason">Reason for application</label>
       <input
         id="application-reason"
         name="application-reason"
@@ -35,19 +100,21 @@
       <select
         id="highest_grade_completed"
         name="highest_grade_completed"
-        value="..."
         required
       >
+        <option value="">Select...</option>
         <option value="matric">National Senior Certificate</option>
         <option value="certificate">Higher Certificate</option>
         <option value="diploma">Diploma</option>
         <option value="university">University</option>
         <option value="some_college">Some College</option>
       </select>
-      <label>What are primary challenges?</label>
+      <label for="primary_challenges">What are your primary challenges?</label>
       <input
         id="primary_challenges"
-        value="e.g. I am having difficulty finding employment..."
+        name="primary_challenges"
+        placeholder="e.g. I am having difficulty finding employment..."
+        required
       />
       <button type="submit">Submit</button>
     </form>

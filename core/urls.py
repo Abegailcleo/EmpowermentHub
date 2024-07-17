@@ -20,8 +20,8 @@ urlpatterns = [
     path('login/',views.login,name = 'login'),
     path('user-reasearch/',views.user_research,name = 'user_research'),
     path('community_support/',views.community_support,name = 'community_support'),
-    
-    
+    path('sign-up/', views.sign_up, name='sign_up'), 
+    path('share_opportunities/', views.share_opportunities, name='share_opportunities'),
     
     
 

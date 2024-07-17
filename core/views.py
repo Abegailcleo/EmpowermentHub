@@ -38,9 +38,11 @@ def login(request):
 def user_research(request):
     return render(request, 'core/user_research.html')
 
-def opportunities(request):
-    return render(request, 'core/opportunities.html')
+def share_opportunities(request):
+    return render(request, 'core/share_opportunities.html')
 
+def sign_up(request):
+    return render(request, 'core/sign_up.html')
     
 class JobListingViewSet(viewsets.ModelViewSet):
     queryset = JobListing.objects.all()
