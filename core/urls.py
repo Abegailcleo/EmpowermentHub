@@ -10,19 +10,21 @@ from rest_framework_simplejwt.views import (
 )
  
 
-router = DefaultRouter()
-router.register(r'job-listings', JobListingViewSet)
-router.register(r'educational-resources', EducationalResourceViewSet)
-router.register(r'financial-assistance', FinancialAssistanceViewSet)
-router.register(r'community-support', CommunitySupportViewSet)
-router.register(r'users', UserViewSet)
-
-
 urlpatterns = [
     path('', views.home, name='index'),  # Root URL of the core app is handled by 'home' view.
     path('',views.homey, name ='home'),
     path('about/', views.about, name='about'),
-    path('', include(router.urls)),    
+    path('job_listing/',views.job_listing,name = 'job_listing'),
+    path('educational_resource/',views.educational_resource,name = 'educational_resource'),
+    path('financial_assistance/',views.financial_assistance,name = 'financial_assistance'),
+    path('login/',views.login,name = 'login'),
+    path('user-reasearch/',views.user_research,name = 'user_research'),
+    path('community_support/',views.community_support,name = 'community_support'),
+    
+    
+    
+    
+
 
     path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
     path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
