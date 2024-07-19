@@ -9,8 +9,10 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
+    <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  />        <style>
       body {
         background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
         color: #343a40;
@@ -132,34 +134,11 @@
         height: 100%;
       }
       .container {
-        max-width: 800px;
+        max-width: 80vw;
         margin: 0 auto;
         padding: 20px;
         position: relative; /* Ensure content is on top of background */
         z-index: 1;
-      }
-      .navigation {
-        display: flex;
-        justify-content: flex-end;
-        background-color: #6a0dad; /* Purple color */
-        padding: 10px 20px;
-        border-radius: 5px;
-        margin-bottom: 20px;
-      }
-      .navigation a {
-        color: #ffffff;
-        text-decoration: none;
-        margin-left: 10px;
-        padding: 8px 16px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
-      .navigation a:first-child {
-        margin-left: auto;
-        background-color: #007bff;
-      }
-      .navigation a:first-child:hover {
-        background-color: #0056b3;
       }
       h3 {
         text-align: center;
@@ -174,17 +153,76 @@
         font-weight: 600;
         font-family: "Roboto", sans-serif;
       }
+      .navigation {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 20px 0;
+      }
+      .navigation button {
+        background-color: #6c757d;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      .navigation button:hover {
+        background-color: #5a6268;
+        transform: scale(1.05);
+      }
+      .button-section {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 20px;
+      }
+      .button-section a button {
+        background-color: #007bff;
+        border-radius: 5px;
+        border: none;
+        color: #ffffff;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      .button-section a button:hover {
+        background-color: #0056b3;
+        transform: scale(1.05);
+      }
 
+      .search-container button {
+        background-color: #6c757d;
+        color:#ffffff;
+        margin-right: 10px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        padding: 5px;
+        width:3vw;
+        height:3vw;
+      }
+      .search-container button:hover {
+        width:4vw;
+      }
     </style>
   </head>
   <body>
-    <div class="header">
+    {% comment %} <div class="header">
       <div class="overlay"></div>
-    </div>
+    </div> {% endcomment %}
     <div class="container">
       <nav class="navigation">
-        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'index' %}"><button>Home</button></a>
+
+        <a href="{% url 'about' %}"><button>About</button></a>
+        <a href="{% url 'login' %}"><button>Resource Sections</button></a>
+        <a href="{% url 'job_listing' %}"><button>Job Listing</button></a>
+        <a href="{% url 'educational_resource' %}"><button>Educational Resource</button></a>
+        <a href="{% url 'financial_assistance' %}"><button>Financial Assistance</button></a>
+        <a href="{% url 'community_support' %}"><button>Community Support</button></a>
       </nav>
+      
       <h3>Educational Resources</h3>
 
     <div class="search-container">
