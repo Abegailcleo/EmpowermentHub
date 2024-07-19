@@ -3,9 +3,167 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Empowerment Hub - Job Search</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+    }
     
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    header {
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+        padding: 20px 0;
+    }
+    
+    nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+    
+    nav ul li {
+        margin-right: 20px;
+    }
+    
+    nav ul li a {
+        text-decoration: none;
+        color: #333;
+        font-weight: bold;
+    }
+    
+    .login-buttons {
+        margin-left: auto;
+    }
+    
+    .login-buttons a {
+        text-decoration: none;
+        margin-left: 20px;
+        padding: 10px 20px;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #0073b1;
+    }
+    
+    .search-container {
+        background-color: #fff;
+        padding: 50px 0;
+        text-align: center;
+        border-bottom: 1px solid #ccc;
+    }
+    
+    .search-box {
+        display: inline-block;
+    }
+    
+    .search-box input[type="text"] {
+        padding: 15px;
+        margin-right: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+    
+    .search-box button {
+        padding: 15px 30px;
+        background-color: #0073b1;
+        border: none;
+        color: #fff;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .popular-searches {
+        background-color: #fff;
+        padding: 20px 0;
+        text-align: center;
+    }
+    
+    .popular-searches ul {
+        list-style: none;
+        padding: 0;
+    }
+    
+    .popular-searches ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+    
+    .popular-searches ul li a {
+        text-decoration: none;
+        color: #0073b1;
+    }
+    
+    footer {
+        background-color: #333;
+        color: #fff;
+        text-align: center;
+        padding: 20px 0;
+    }
+    
+    footer ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    footer ul li {
+        display: inline;
+        margin: 0 10px;
+    }
+    
+    footer ul li a {
+        text-decoration: none;
+        color: #fff;
+    }
+    
+</style>
+<body>
+   
+    <main>
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" placeholder="What">
+                <input type="text" placeholder="Where">
+                <button>Find Jobs</button>
+            </div>
+        </div>
+        <div class="popular-searches">
+            <h2>Popular Searches</h2>
+            <ul>
+                <li><a href="#">Remote</a></li>
+                <li><a href="#">Full Time</a></li>
+                <li><a href="#">Part Time</a></li>
+                <li><a href="#">Work From Home</a></li>
+                <li><a href="#">New</a></li>
+            </ul>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <ul>
+                <li><a href="#">© 2024 Empowerment Hub</a></li>
+                <li><a href="#">Accessibility at Empowerment Hub</a></li>
+                <li><a href="#">Privacy Center</a></li>
+                <li><a href="#">Cookies</a></li>
+                <li><a href="#">Privacy</a></li>
+                <li><a href="#">Terms</a></li>
+            </ul>
+        </div>
+    </footer>
 </body>
 </html>
