@@ -214,7 +214,6 @@
     <div class="container">
       <nav class="navigation">
         <a href="{% url 'index' %}"><button>Home</button></a>
-
         <a href="{% url 'about' %}"><button>About</button></a>
         <a href="{% url 'login' %}"><button>Resource Sections</button></a>
         <a href="{% url 'job_listing' %}"><button>Job Listing</button></a>
@@ -239,7 +238,7 @@
                 src="{% static 'core/resources/coding-educational-image.png' %}"
                 alt="Educational Resources: Coding"
                 />
-                <div class="image-info"><a href="core/tech-educational-resources.html">Tech</a><br>Venture into the world of tech.</div>
+                <div class="image-info"><a href="{% url 'tech_educational_resources' %}">Tech</a><br>Venture into the world of tech.</div>
             </div>
             <div class="enclosing-container">
               <img
