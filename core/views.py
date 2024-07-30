@@ -1,8 +1,8 @@
 from django.shortcuts import render
 
 from rest_framework import viewsets
-from .models import JobListing, EducationalResource, TechEducationalResource, FinancialAssistance, CommunitySupport
-from .serializers import JobListingSerializer, EducationalResourceSerializer, TechEducationalResourceSerializer, FinancialAssistanceSerializer, CommunitySupportSerializer
+from .models import JobListing, EducationalResource, FinancialAssistance, CommunitySupport
+from .serializers import JobListingSerializer, EducationalResourceSerializer, FinancialAssistanceSerializer, CommunitySupportSerializer
 from django.contrib.auth.models import User
 from .serializers import UserSerializer
 from django_filters.rest_framework import DjangoFilterBackend
@@ -25,16 +25,6 @@ def job_listing(request):
 
 def educational_resource(request):
     return render(request, 'core/educational_resource.html')
-
-def tech_educational_resources(request):
-    return render(request, 'core/tech-educational-resources.html')
-
-def some_view(request):
-    # Some processing
-    url = reverse('tech_educational_resources')
-    return redirect(url)
-
-
 
 def financial_assistance(request):
     return render(request, 'core/financial_assistance.html')
@@ -69,18 +59,6 @@ class EducationalResourceViewSet(viewsets.ModelViewSet):
     filterset_fields = ['title']
     search_fields = ['title', 'description']
     ordering_fields = ['title']
-
-class TechEducationalResourcesResourceViewSet(viewsets.ModelViewSet):
-    queryset = TechEducationalResource.objects.all()
-    serializer_class = TechEducationalResourceSerializer
-    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
-    filterset_fields = ['title']
-    search_fields = ['title', 'description']
-    ordering_fields = ['title']
-
-
-
-
 
 class FinancialAssistanceViewSet(viewsets.ModelViewSet):
     queryset = FinancialAssistance.objects.all()

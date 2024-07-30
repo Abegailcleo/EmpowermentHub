@@ -17,14 +17,6 @@ class EducationalResource(models.Model):
     description = models.TextField()
     url = models.URLField()
 
-
-class TechEducationalResource(models.Model):
-    title = models.CharField(max_length=200)
-    description = models.TextField()
-    url = models.URLField()
-
-
-
 class FinancialAssistance(models.Model):
     name = models.CharField(max_length=200)
     description = models.TextField()
