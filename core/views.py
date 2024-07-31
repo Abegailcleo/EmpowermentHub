@@ -45,7 +45,7 @@ def login(request):
         if form.is_valid():
             user = form.get_user()
             auth_login(request, user)
-            return redirect('home')  # Redirect to a success page
+            return redirect('dashboard')  # Redirect to a success page
         else:
             return render(request, 'core/login.html', {'form': form})
       else:

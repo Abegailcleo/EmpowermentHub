@@ -2,10 +2,118 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Home Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Main Dashboard - South Africa Empowerment Hub</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        height: 100vh;
+        background: linear-gradient(
+          90deg,
+          rgba(2, 0, 36, 1) 0%,
+          rgba(43, 9, 121, 1) 35%,
+          rgba(0, 212, 255, 1) 100%
+        );
+      }
+
+      .header {
+        background-color: #e6447d;
+        color: white;
+        padding: 1em;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .header .profile-icon {
+        font-size: 1.5em;
+        margin-right: 1em;
+        cursor: pointer;
+      }
+
+      .header .title {
+        flex: 1;
+        font-size: 1.5em;
+      }
+
+      .sidebar {
+        width: 250px;
+        background-color: #2b0924;
+        color: white;
+        padding: 1em;
+        height: 100%;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      }
+
+      .sidebar a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 0.5em 1em;
+        margin: 0.5em 0;
+        border-radius: 5px;
+      }
+
+      .sidebar a:hover {
+        background-color: #e6447d;
+      }
+
+      .main-content {
+        flex: 1;
+        padding: 2em;
+        color: #333;
+      }
+
+      .main-content h1 {
+        color: #e6447d;
+      }
+
+      .main-content p {
+        color: #333;
+      }
+    </style>
   </head>
+
   <body>
-    <h1>Welcome to EmpowermentHub</h1>
-    <p>This is the home page.</p>
+    <div class="header">
+      <i class="fas fa-user-circle profile-icon" onclick="showProfile()"></i>
+      <div class="title">Dashboard</div>
+    </div>
+    <div class="sidebar">
+      <h2>Navigation</h2>
+      <a href="job-portal.html">Job Portal</a>
+      <a href="{% url 'educational_resource' %}">Educational Resource</a>
+      <a href="{% url 'financial_assistance'%}">Financial Assistance</a>
+      <a href="{% url 'community_support'%}">Community Support</a>
+
+      <a href="#" onclick="logout()">Logout</a>
+    </div>
+    <div class="main-content">
+      <h1>Welcome to the South Africa Empowerment Hub</h1>
+      <p>
+        Your personalized dashboard is here. Use the navigation to access
+        different sections of the app.
+      </p>
+    </div>
+
+    <script>
+      function showProfile() {
+        // Logic to show profile or navigate to profile page
+        alert("Profile clicked!");
+      }
+
+      function logout() {
+        // Logout logic
+        alert("Logging out...");
+        window.location.href = "index.html"; // Redirect to login/sign-up page
+      }
+    </script>
   </body>
 </html>

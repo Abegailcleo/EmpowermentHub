@@ -3,43 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Login</title>
     <link rel="stylesheet" href="index.css" />
   </head>
-
   <body>
-    <form method="post">
+    <form method="post" action="{% url 'login' %}">
       {% csrf_token %} {{ form.as_p }}
       <button type="submit">Login</button>
-
-      <div class="container">
-        <label for="full-name" name="full-name"><b>Full name</b></label>
-        <input
-          type="text"
-          placeholder="Enter full name"
-          name="full-name"
-          required
-        />
-
-        <label for="password" name="password"><b>Password</b></label>
-        <input
-          type="password"
-          placeholder="Enter Password"
-          name="password"
-          required
-        />
-
-        <button type="submit">Login</button>
-        <label>
-          <input type="checkbox" checked="checked" name="remember" /> Remember
-          me
-        </label>
-      </div>
     </form>
-    <div class="container" style="background-color: #f1f1f1">
-      <a href="..\templates\sign-up.html" class="sign-up"
-        ><button>Don't have an account?<br />Sign Up</button></a
-      >
+
+    <div class="container">
+      <a href="{% url 'sign_up' %}" class="sign_up">
+        <button>Don't have an account?<br />Sign Up</button>
+      </a>
       <button class="password"><a href="#">Forgot password?</a></button>
     </div>
   </body>
