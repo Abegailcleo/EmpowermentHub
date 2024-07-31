@@ -1,33 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="index.css">
-</head>
+    <link rel="stylesheet" href="index.css" />
+  </head>
 
-<body>
+  <body>
     <form method="post">
-        <div class="container">
-            <label for="full-name" name="full-name"><b>Full name</b></label>
-            <input type="text" placeholder="Enter full name" name="full-name" required>
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Login</button>
 
-            <label for="password" name="password"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="password" required>
+      <div class="container">
+        <label for="full-name" name="full-name"><b>Full name</b></label>
+        <input
+          type="text"
+          placeholder="Enter full name"
+          name="full-name"
+          required
+        />
 
-            <button type="submit">Login</button>
-            <label>
-                <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
-        </div>
+        <label for="password" name="password"><b>Password</b></label>
+        <input
+          type="password"
+          placeholder="Enter Password"
+          name="password"
+          required
+        />
 
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember" /> Remember
+          me
+        </label>
+      </div>
     </form>
-    <div class="container" style="background-color:#f1f1f1">
-        <a href="..\templates\sign-up.html" class="sign-up"><button>Don't have an account?<br>Sign Up</button></a>
-        <button class="password"><a href="#">Forgot password?</a></button>
+    <div class="container" style="background-color: #f1f1f1">
+      <a href="..\templates\sign-up.html" class="sign-up"
+        ><button>Don't have an account?<br />Sign Up</button></a
+      >
+      <button class="password"><a href="#">Forgot password?</a></button>
     </div>
-</body>
-
+  </body>
 </html>

@@ -55,6 +55,9 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'EmpowermentHub.urls'
+LOGIN_REDIRECT_URL = 'dashboard'  # Ensure this is set to your dashboard URL name
+LOGOUT_REDIRECT_URL = 'login'
+
 
 TEMPLATES = [
     {
