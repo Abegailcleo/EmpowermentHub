@@ -9,127 +9,106 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
+
+<style>
       body {
-        background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
-        color: #343a40;
+        background-color: rgba(140, 57, 158, .2);
         font-family: "Open Sans", sans-serif;
         margin: 0;
         padding: 0;
-      }
-      .header {
-        background-image: url("https://img.freepik.com/free-vector/tiny-students-sitting-near-books-getting-university-degree-paying-money-education-business-flat-vector-illustration-college-scholarship-finance-system-school-fee-economy-student-loan-concept_74855-21037.jpg?t=st=1721222496~exp=1721226096~hmac=8227d63ce0403504c0b99d99cf895b995e00ff0ffadb876e1fa02bf5710efed5&w=740");
-        background-size: cover;
-        background-position: center;
-        height: 200px; /* Adjust height as needed */
         position: relative;
-      }
-      .dropdown-container {
-        position: relative;
-        display: flex;
-        cursor: pointer;
       }  
-      .dropdown-contents {
-        display: none;
-        position: absolute;
-        background-color: #f9f9f9;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        padding: 12px 16px;
-        z-index: 1;
-        right:18vw;
+      
+      .community-block{
+        margin-top:10vh;
+        margin-bottom:10vh;
+        margin-right: 1vw;
+        margin-left: 1vw;
+        height: 50vh;
+        width:100vw;
       }
-      .dropdown-container:hover .dropdown-contents {
-        display: block;
+      .community-block table{
+        border-collapse: separate;
+        border-spacing: 0 15px;
+        column-width:20vw;
+        width:80vw;
+        border: 3px solid;
+        text-align: center;
+        padding:20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        background-color:rgba(140, 57, 158, 0.2);
+        border-radius:6vw;
       }
-      .overlay {
-        background-color: rgba(255, 255, 255, 0.4); /* Lighter white overlay */
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+      .community-block table th{
+        font-size:25px;
       }
-      .container {
-        max-width: 800px;
+      .community-block table td{
+        font-size:20px;
+      }
+    
+      .community-block {
+        max-width: 80vw;
         margin: 0 auto;
         padding: 20px;
-        position: relative; 
+        position: relative;
         z-index: 1;
-      }
-      .navigation {
-        display: flex;
-        justify-content: flex-end;
-        background-color: #6a0dad; /* Purple color */
-        padding: 10px 20px;
-        border-radius: 5px;
-        margin-bottom: 20px;
-      }
-      .navigation a {
-        color: #ffffff;
-        text-decoration: none;
-        margin-left: 10px;
-        padding: 8px 16px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
-      .navigation a:first-child {
-        margin-left: auto;
-        background-color: #007bff;
-      }
-      .navigation a:first-child:hover {
-        background-color: #0056b3;
-      }
+        overflow-x: hidden;
+      } 
       h3 {
         text-align: center;
         margin-top: 20px;
         font-family: "Roboto", sans-serif;
         font-weight: 700;
-        font-size:30px;
       }
-
-      span{
-        font-size:1.5vw;
-        margin-bottom:8vh;
+      .navigation {
+        {% comment %} display: flex;
+        justify-content: center; 
+        gap: 10px;{% endcomment %}
+        margin-left: 5vw;
+        margin-top: 2vw;
+\        width:2vw;
+        font-size:2vw;
       }
-      a{
-        font-size:1.5vw;
+      .navigation a {
+        background-color:rgba(140, 57, 158, 0.2);
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
       }
-    
+      .navigation:hover {
+        max-width:3vw;
+        font-size:2.5vw;
+      }
     </style>
   </head>
   <body>
-    <div class="header">
-      <div class="overlay"></div>
-    </div>
-    <div class="container">
+    <div class="community-container">
       <nav class="navigation">
         <a href="{% url 'index' %}">Home</a>
       </nav>
-      <h3>Community Supporty</h3>
-    <section>
-            <div class="dropdown-container">
-                <span>Mentorship Programs </span>
-                <div class="dropdown-contents">
-                    <a href="core/tech-educational-resources.html">Find a mentor </a><br>
-                    <a href="core/tech-educational-resources.html">Become a mentor </a><br>
-                </div>
-            </div>
-            <div class="dropdown-container">
-              <span>Community Forums </span>
-              <div class="dropdown-contents">
-                  <a href="core/tech-educational-resources.html">Discussion Categories</a><br>
-                  <a href="core/tech-educational-resources.html">Create / Join Discussions </a><br>
-              </div>
-          </div>
-          <div class="dropdown-container">
-            <span>Mental Health Resources</span>
-            <div class="dropdown-contents">
-                <a href="core/tech-educational-resources.html">Helplines and Emergency Contacts</a><br>
-            </div>
-        </div>
-    </section>
-       
-  </body>
+      <h3>Community Support</h3>
+
+        <div class="community-block">
+          <table>
+            <thead>
+            <tr>
+              <th>Mentorship Programs</th>
+              <th>Community Forum</th>
+              <th>Mental Health Resources</th>
+            </tr>
+            </thead> 
+            <tbody>  
+              <tr>
+                <td><a href="{% url 'mentorship' %}">Request Mentorship or become a mentor</a></td>
+                <td ><a href="#">Create / Join Discussions</a></td>
+                {% comment %} <td ><a href="{% url 'community_forum' %}">Create / Join Discussions</a></td> {% endcomment %}
+                <td><a href="{% url 'mental_health_resources' %}">Helplines and Emergency Contacts</a></td>
+              </tr>                  
+            </tbody>        
+          </table>
+      </div>
+    </body>
 </html>

@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import JobListing, EducationalResource, FinancialAssistance, CommunitySupport
+from .models import *
 from django.contrib.auth.models import User
 
 
@@ -13,6 +13,26 @@ class EducationalResourceSerializer(serializers.ModelSerializer):
         model = EducationalResource
         fields = '__all__'
 
+# Educational Resources Serializers
+
+class TechEducationalResourceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = TechEducationalResource
+        fields = '__all__'
+
+
+class LanguageEducationalResourceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = LanguageEducationalResource
+        fields = '__all__'
+
+
+class ArtsAndCraftsEducationalResourceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ArtsAndCraftsEducationalResource
+        fields = '__all__'
+
+
 class FinancialAssistanceSerializer(serializers.ModelSerializer):
     class Meta:
         model = FinancialAssistance
@@ -23,6 +43,24 @@ class CommunitySupportSerializer(serializers.ModelSerializer):
         model = CommunitySupport
         fields = '__all__'
 
+# Community Support Serializers
+
+class MentorshipSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Mentorship
+        fields = '__all__'
+
+
+class CommunityForumSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CommunityForum
+        fields = '__all__'
+
+
+class MentalHealthResourcesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MentalHealthResources
+        fields = '__all__'
 
 
 class UserSerializer(serializers.ModelSerializer):

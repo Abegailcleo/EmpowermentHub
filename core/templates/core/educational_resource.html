@@ -4,19 +4,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Financial Aid Request</title>
+    <title>Educational Resources</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <style>
+    <link
+    rel="stylesheet"
+    href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+  />        <style>
       body {
-        background: linear-gradient(to bottom right, #f0f0f0, #e0e0e0);
-        color: #343a40;
         font-family: "Open Sans", sans-serif;
         margin: 0;
         padding: 0;
+        width:100%;
+        overflow-x: hidden;
+        position: relative;
+        background-color: rgba(108, 117, 125, .5);
       }
       .search-container{
         width:30vw;
@@ -57,136 +61,192 @@
         border-radius: 5px;
         font-size: 14px;
       }
-      {% comment %} 
-      button[type="submit"] {
-        background-color: #007bff;
+      
+      .educational-resources::-webkit-scrollbar {
+        display: none; /* Hide scrollbar for WebKit browsers */
+    }
+    
+    .scroll-arrow {
+      position: absolute;
+      bottom: 60vh;
+      background-color: rgba(108, 117, 125, .5);
+      color: #fff;
+      padding: 10px;
+      border-radius: 50%;
+      cursor: pointer;
+      z-index: 1000;
+      align-items:center;
+      border:none;
+      font-size:2vw;
+    }
+    .scroll-arrow.right {
+      right: 0.5vw;
+      {% comment %} transform: rotate(45deg); {% endcomment %}
+    }
+    
+    .scroll-arrow.left {
+      left: 0.5vw;
+      {% comment %} transform: rotate(-135deg); {% endcomment %}
+    }
+      .educational-resources{
+        overflow-x: auto;
+        {% comment %} -ms-overflow-style: none;  {% endcomment %}
+        scrollbar-width: none; 
+        scroll-behavior: smooth; 
+        margin-top:10vh;
+        margin-bottom:10vh;
+        margin-right: 1vw;
+        margin-left: 1vw;
+        height: 45vh;
+        width: 90vw;
+        display: flex;
+        margin-bottom:5px;
+      }
+      .educational-resources img{
+        height: 30vh;
+        width: 15vw;
+        margin-top:2vh ;
+        margin-left: 1vw;
+        margin-right: 1vw;
+        border-radius: 10%;
+      }
+      .enclosing-container{
+        border-radius: 10%;
+        position:relative;
+        margin-right: 1vw;
+        display: flex;
+        margin-top:3vh;   
+        width: 18vw;
+        height: 35vh;
+        background-color: rgba(108, 117, 125, .3);
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+        align-items: center;  
+      }
+      .enclosing-container:hover{
+        height:18vw;
+      }
+      .image-info{
+        position: absolute;
+        width:13.6vw;
+        height:10vh;
+        bottom: 0px;
+        background-color: rgba(0,0,0,.8);
+        color: white;
+        padding-left: 22px;
+        padding-right: 22px;
+        font-size:14px;
+        border-bottom-left-radius: 11%;
+        border-bottom-right-radius: 11%;
+        {% comment %} color:black; {% endcomment %}
+      }
+      .image-info a{
+        color:rgb(108, 117, 125);
+      }
+      .container {
+        max-width: 80vw;
+        margin: 0 auto;
+        padding: 20px;
+        position: relative;
+        z-index: 1;
+        overflow-x: hidden;
+
+      }
+      h3 {
+        text-align: center;
+        margin-top: 15vh;
+        margin-bottom: 7vh;
+        font-family: "Roboto", sans-serif;
+        font-size:5vw;
+      }
+      .navigation {
+        margin-right: 0;
+        margin-top: 2vw;
+        margin-bottom: 10vw;
+        width:2vw;
+        font-size:2vw;
+      }
+      .navigation a {
+        background-color: rgba(108, 117, 125, .3);
         color: #ffffff;
         border: none;
         padding: 10px 20px;
         cursor: pointer;
         border-radius: 5px;
-        transition: background-color 0.3s ease;
-        font-size: 14px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
       }
-      button[type="submit"]:hover {
-        background-color: #0056b3;
-      } {% endcomment %}
-      .header {
-        background-image: url("https://img.freepik.com/free-vector/tiny-students-sitting-near-books-getting-university-degree-paying-money-education-business-flat-vector-illustration-college-scholarship-finance-system-school-fee-economy-student-loan-concept_74855-21037.jpg?t=st=1721222496~exp=1721226096~hmac=8227d63ce0403504c0b99d99cf895b995e00ff0ffadb876e1fa02bf5710efed5&w=740");
-        background-size: cover;
-        background-position: center;
-        height: 200px; /* Adjust height as needed */
-        position: relative;
+      .navigation:hover {
+        max-width:3vw;
+        font-size:2.5vw;
       }
-      .educational-resources{
-        margin-top:10vh;
-        margin-bottom:10vh;
-        height: 30vh;
-        width: auto;
-        display: flex;
+      button {
+        display: flex; 
+        justify-content: center;
+        width:5vw;
+        height:5vh;
+        font-size:2vw;
       }
-      .educational-resources img{
-        height: 30vh;
-        width: 18vw;
-        margin-top:2vh ;
-        margin-left: 1vw;
-      }
-      .educational-resources img:hover{
-        height: 33vh;
-        {% comment %} width: 20vw;        {% endcomment %}
-        font-size:20px;
-      }
-      .enclosing-container{
-        position:relative;
-        margin-left: 1vw;
-        display: flex;
-        margin-top:3vh;   
-        width: 20vw;
-        height: 35vh;
-        background-color: #343a40;
-        align-items: center;  
-      }
-      .image-info{
-        position: absolute;
-        width:16.3vw;
-        height:10vh;
-        bottom: 0px;
-        background-color: black;
-        color: white;
-        padding-left: 22px;
-        padding-right: 22px;
-        opacity:0.8;
-        font-size:15px;
-      }
-      .image-info:hover{
-        height:8vw;
-        width:16.4vw;
-        font-size:18px;
-      }
-      .overlay {
-        background-color: rgba(255, 255, 255, 0.4); /* Lighter white overlay */
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-      }
-      .container {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
-        position: relative; /* Ensure content is on top of background */
-        z-index: 1;
-      }
-      .navigation {
-        display: flex;
-        justify-content: flex-end;
-        background-color: #6a0dad; /* Purple color */
-        padding: 10px 20px;
-        border-radius: 5px;
-        margin-bottom: 20px;
-      }
-      .navigation a {
-        color: #ffffff;
-        text-decoration: none;
-        margin-left: 10px;
-        padding: 8px 16px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-      }
-      .navigation a:first-child {
-        margin-left: auto;
-        background-color: #007bff;
-      }
-      .navigation a:first-child:hover {
-        background-color: #0056b3;
-      }
-      h3 {
-        text-align: center;
-        margin-top: 20px;
-        font-family: "Roboto", sans-serif;
-        font-weight: 700;
-      }
-    
-      label {
-        display: block;
-        margin-bottom: 8px;
-        font-weight: 600;
-        font-family: "Roboto", sans-serif;
+      button:hover{
+        width:6vw;
+        height:6vh;
+        font-size:4vw;
       }
 
+      .search-container button {
+        background-color: #6c757d;
+        color:#ffffff;
+        margin-right: 10px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+        padding: 5px;
+        width:3vw;
+        height:3vw;
+      }
+      .search-container button:hover {
+        width:4vw;
+      }
+
+      #recents{
+        border: 1px solid #ddd;
+        background-color: rgba(0,0,0,.2);
+        padding: 10px;
+        border-radius: 5px;
+        font-size:2vw;
+    }
+    
+    #recents h2 {
+        margin-top: 0;
+    }
+    #recents-list {
+      list-style-type: none;
+      padding-left: 0;
+  }
+  
+  #recents-list li {
+      margin-bottom: 10px;
+  }
+  
+  #recents-list a {
+      color: #007bff;
+      text-decoration: none;
+  }
+  
+  #recents-list a:hover {
+      text-decoration: underline;
+  }
     </style>
   </head>
   <body>
-    <div class="header">
-      <div class="overlay"></div>
-    </div>
     <div class="container">
       <nav class="navigation">
         <a href="{% url 'index' %}">Home</a>
+        {% comment %} <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'login' %}">Resource Sections</a>
+        <a href="{% url 'job_listing' %}">Job Listing</a> 
+        <a href="{% url 'educational_resource' %}">Educational Resource</a>
+        <a href="{% url 'financial_assistance' %}">Financial Assistance</a>
+        <a href="{% url 'community_support' %}">Community Support</a>{% endcomment %}
       </nav>
       <h3>Educational Resources</h3>
-
     <div class="search-container">
         <form action="/action_page.php">
         <input type="text" placeholder="Search.." name="search">
@@ -196,28 +256,120 @@
     <section>     
     <section>
         <div class="educational-resources">
+          
             <div class="enclosing-container">
                 <img
                 src="{% static 'core/resources/coding-educational-image.png' %}"
                 alt="Educational Resources: Coding"
                 />
-                <div class="image-info"><a href="core/tech-educational-resources.html">Tech</a><br>Venture into the world of tech.</div>
+                <div class="image-info"><a href="{% url 'tech_educational_resources' %}" class="track-link">IT</a><br>Venture into the world of tech.</div>
             </div>
             <div class="enclosing-container">
               <img
               src="{% static 'core/resources/language-educational-image.png' %}"
               alt="Educational Resources: Learn a language"
               />
-              <div class="image-info"><a href="core/language-educational-resources.html">Languages</a><br>Learn how to communicate in a different language.</div>
+              <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Languages</a><br>Communicate in a different language.</div>
           </div>
           <div class="enclosing-container">
             <img
             src="{% static 'core/resources/arts&crafts-educational-image.png' %}"
-            alt="Educational Resources: Coding"
+            alt="Educational Resources: Art"
             />
-            <div class="image-info"><a href="core/arts&crafts-educational-resources.html">Arts & Crafts</a><br>Explore your creativity.</div>
+            <div class="image-info"><a href="{% url 'arts_and_crafts_educational_resources' %}" class="track-link">Arts & Crafts</a><br>Explore your creativity.</div>
           </div>
+          
+          <div class="enclosing-container">
+            <img
+            src="{% static 'core/resources/business-and-economics.png' %}"
+            alt="Business and Economics: Learn business and Economics"
+            />
+            <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Business and Economics</a><br>Increase your business knowledge.</div>
+        </div>
+        <div class="enclosing-container">
+          <img
+          src="{% static 'core/resources/health-and-wellness.png' %}"
+          alt="Educational Resources: Health"
+          />
+          <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Health and Wellness</a><br>Embark on a path to a healthier happier you.</div>
+      </div>
+      <div class="enclosing-container">
+        <img
+        src="{% static 'core/resources/career-development.png' %}"
+        alt="Educational Resources: Career Development"
+        />
+        <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Career Development</a><br>Grow your career.</div>
+    </div>
+    <button  class="scroll-arrow left" onclick="scrollLeft()"><</button>
+
+    <button class="scroll-arrow right" onclick="scrollRight()">></button>          
     </section>
+
+
+    <section>
+      <div id="recents">
+        <h2>Recents</h2>
+        <ol id="recents-list">
+      </ol>
+    </div>
+    </section>
+    <script>
+      function scrollRight() {
+        const container = document.querySelector('.educational-resources');
+        
+        container.scrollBy({
+          top: 0,
+          left: 100, 
+          behavior: 'smooth'
+        });
+      }
+      function scrollLeft() {
+        const container = document.querySelector('.educational-resources');
+        
+        container.scrollBy({
+          top: 0,
+          left: -100,
+          behavior: 'smooth'
+        });
+      }
+      
+      function addRecentLink(url, title) {
+        const linkList = document.getElementById('recents-list');
+        const listItem = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = url;
+        link.textContent = title;
+        link.target = '_blank'; 
+        listItem.appendChild(link);
+        linkList.appendChild(listItem);
+    }
+
+function saveRecentLink(url, title) {
+  let recentLinks = JSON.parse(localStorage.getItem('recentLinks')) || [];
+  if (!recentLinks.some(link => link.url === url)) {
+      recentLinks.push({ url, title });
+      localStorage.setItem('recentLinks', JSON.stringify(recentLinks));
+  }
+}
+
+function loadRecentLinks() {
+  let recentLinks = JSON.parse(localStorage.getItem('recentLinks')) || [];
+  recentLinks.forEach(link => addRecentLink(link.url, link.title));
+}
+
+document.addEventListener('DOMContentLoaded', loadRecentLinks);
+
+document.querySelectorAll('.track-link').forEach(link => {
+  link.addEventListener('click', function(event) {
+      const url = this.href;
+      const title = this.textContent;
+      
+      addRecentLink(url, title);
+      saveRecentLink(url, title);
+  });
+});
+
+    </script>
        
   </body>
 </html>

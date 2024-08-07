@@ -1,0 +1,181 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Community Forum</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+<style>
+      body {
+        background-color: rgba(130, 50, 100, .2);
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+        position: relative;
+      }  
+      
+      .mentorship-container{
+        position:relative;
+        margin-top:10vh;
+        margin-right: 10vw;
+        margin-left: 10vw;
+        margin-bottom:50vh;
+        height: 50vh;
+        width:80vw;
+        display:flex;
+        align-items: center;  
+      }
+
+      h4 {
+        text-align: center;
+        margin-top: 2vh;
+        font-family: "Roboto", sans-serif;
+        font-size:7vh;
+      }
+      .navigation {
+        {% comment %} display: flex;
+        justify-content: center; 
+        gap: 10px;{% endcomment %}
+        margin-left: 5vw;
+        margin-top: 2vw;
+        margin-bottom: 10vw;
+        width:2vw;
+        font-size:2vw;
+      }
+      .navigation a {
+        background-color:rgba(140, 57, 158, 0.2);
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+      .navigation:hover {
+        max-width:3vw;
+        font-size:2.5vw;
+      }
+      form{
+        background-color: #f2f2f2;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+      }
+      label{
+        margin-left:5vw;
+        margin-right:5vw;
+        font-size:1.3vw;
+      }
+      input[type=text], select {
+        width: 25vw;
+        margin-top:2vh;
+        margin-left:4vw;
+        margin-right:4vw;
+        {% comment %} margin-bottom:2vh; {% endcomment %}
+        padding: 12px 20px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+      
+      input[type=submit] {
+        width: 20vw;
+        background-color: #4CAF50;
+        color: white;
+        padding: 14px 20px;
+        margin-top:4vh;
+        margin-left:4vw;
+        margin-right:4vw;       
+        margin-bottom:2vh; 
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+      }
+      
+      input[type=submit]:hover {
+        background-color: #45a049;
+      }
+      
+      .mentorship-container div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        box-shadow: 0 0 20px rgba(0, 0, 5, 0.15);
+        padding: 20px;
+        width: 35vw;
+        margin-top:40vh;
+      }
+      .mentor-sign-up{
+        margin-right:2vw;
+      }
+
+    </style>
+  </head>
+  <body>
+    <nav class="navigation">
+      <a href="{% url 'index' %}">Home</a>
+    </nav>
+    <div class="mentorship-container">
+      <div class="mentor-sign-up">
+        <h4>Become a mentor</h4>
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+      
+          <label for="category">Field of expertise</label>
+          <select id="category" name="category">
+            <option value="IT">IT</option>
+            <option value="career-development">Career Development</option>
+            <option value="arts">Arts And Crafts</option>
+          </select>
+          <label for="experience-level">Experience Level</label>
+          <select id="experience-level" name="experience-level">
+            <option value="intermediate">Intermediate (3-5 years)</option>
+            <option value="advanced">Advanced (5-8 years)</option>
+            <option value="master">Master (8+)</option>
+          </select>
+          <label for="email">Email Address</label>
+          <input id="email" type="email" name="email" placeholder="e.g. johndoe@gmail.com" required>
+          <label for="cellphone">Contact Number</label>
+          <input id="cellphone" type="text" name="cellphone" placeholder="e.g. +27 333..." required>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+      <div class="mentor-request">
+        <h4>Request Mentorship</h4>
+        <form action="/action_page.php">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      
+          <label for="lname">Last Name</label>
+          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+          <label for="category">What would you like assistance with?</label>
+          <select id="category" name="category">
+            <option value="IT">IT</option>
+            <option value="career-development">Career Development</option>
+            <option value="arts">Arts And Crafts</option>
+          </select>
+          <label for="experience-level">Experience Level</label>
+          <select id="experience-level" name="experience-level">
+            <option value="beginner">Beginner (0-3 years)</option>
+            <option value="intermediate">Intermediate (3-5 years)</option>
+            <option value="advanced">Advanced (5-8 years)</option>
+            <option value="master">Master (8+)</option>
+          </select>
+          <label for="email">Email Address</label>
+          <input id="email" type="email" name="email" placeholder="e.g. johndoe@gmail.com" required>
+          <label for="cellphone">Contact Number</label>
+          <input id="cellphone" type="text" name="cellphone" placeholder="e.g. +27 333..." required>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+
+    </body>
+</html>
