@@ -68,7 +68,7 @@
     
     .scroll-arrow {
       position: absolute;
-      bottom: 60vh;
+      bottom: 70vh;
       background-color: rgba(108, 117, 125, .5);
       color: #fff;
       padding: 10px;
@@ -263,14 +263,17 @@
               src="{% static 'core/resources/language-educational-image.png' %}"
               alt="Educational Resources: Learn a language"
               />
-              <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Languages</a><br>Communicate in a different language.</div>
+              {% comment %} <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Languages</a><br>Communicate in a different language.</div> {% endcomment %}
+
+              <div class="image-info"><a href="#" class="track-link">Languages</a><br>Communicate in a different language.</div>
           </div>
           <div class="enclosing-container">
             <img
             src="{% static 'core/resources/arts&crafts-educational-image.png' %}"
             alt="Educational Resources: Art"
             />
-            <div class="image-info"><a href="{% url 'arts_and_crafts_educational_resources' %}" class="track-link">Arts & Crafts</a><br>Explore your creativity.</div>
+            {% comment %} <div class="image-info"><a href="{% url 'arts_and_crafts_educational_resources' %}" class="track-link">Arts & Crafts</a><br>Explore your creativity.</div> {% endcomment %}
+            <div class="image-info"><a href="#" class="track-link">Arts & Crafts</a><br>Explore your creativity.</div>
           </div>
           
           <div class="enclosing-container">
@@ -278,21 +281,26 @@
             src="{% static 'core/resources/business-and-economics.png' %}"
             alt="Business and Economics: Learn business and Economics"
             />
-            <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Business and Economics</a><br>Increase your business knowledge.</div>
-        </div>
+            {% comment %} <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Business and Economics</a><br>Increase your business knowledge.</div> {% endcomment %}
+            <div class="image-info"><a href="#" class="track-link">Business and Economics</a><br>Increase your business knowledge.</div>
+          </div>
         <div class="enclosing-container">
           <img
           src="{% static 'core/resources/health-and-wellness.png' %}"
           alt="Educational Resources: Health"
           />
-          <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Health and Wellness</a><br>Embark on a path to a healthier happier you.</div>
-      </div>
+          {% comment %} <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Health and Wellness</a><br>Embark on a path to a healthier happier you.</div> {% endcomment %}
+          <div class="image-info"><a href="#" class="track-link">Health and Wellness</a><br>Embark on a path to a healthier happier you.</div>
+
+        </div>
       <div class="enclosing-container">
         <img
         src="{% static 'core/resources/career-development.png' %}"
         alt="Educational Resources: Career Development"
         />
-        <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Career Development</a><br>Grow your career.</div>
+        {% comment %} <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Career Development</a><br>Grow your career.</div> {% endcomment %}
+
+        <div class="image-info"><a href="#" class="track-link">Career Development</a><br>Grow your career.</div>
     </div>
     <button  class="scroll-arrow left" onclick="scrollLeft()"><</button>
 
