@@ -156,15 +156,18 @@
         font-family: "Roboto", sans-serif;
         font-size:5vw;
       }
+      
       .navigation {
-        margin-right: 0;
+        {% comment %} display: flex;
+        justify-content: center; 
+        gap: 10px;{% endcomment %}
+        margin-left: 5vw;
         margin-top: 2vw;
-        margin-bottom: 10vw;
+        margin-bottom: 5vw;
         width:2vw;
         font-size:2vw;
       }
-      .navigation a {
-        background-color: rgba(108, 117, 125, .3);
+      .navigation a {        background-color: rgba(108, 117, 125, .3);
         color: #ffffff;
         border: none;
         padding: 10px 20px;
@@ -176,7 +179,6 @@
         max-width:3vw;
         font-size:2.5vw;
       }
-
       .scroll-arrow:hover {
         display: flex; 
         justify-content: center;

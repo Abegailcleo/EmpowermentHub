@@ -20,7 +20,7 @@
         position: relative;
       }  
       .tech-resources{
-        margin-top:10vh;
+        margin-top:5vh;
         margin-bottom:10vh;
         margin-right: 1vw;
         margin-left: 1vw;
@@ -73,8 +73,7 @@
       }
       h3 {
         text-align: center;
-        margin-top: 15vh;
-        margin-bottom: 7vh;
+        margin-top: 1vh;
         font-family: "Roboto", sans-serif;
         font-size:5vw;
       }
@@ -84,7 +83,7 @@
         gap: 10px;{% endcomment %}
         margin-left: 5vw;
         margin-top: 2vw;
-        margin-bottom: 10vw;
+        margin-bottom: 5vw;
         width:2vw;
         font-size:2vw;
       }
@@ -105,7 +104,7 @@
   </head>
   <body>
       <nav class="navigation">
-        <a href="{% url 'index' %}"><button>Home</button></a>
+        <a href="{% url 'index' %}">Home</a>
         {% comment %}<a href="{% url 'about' %}"><button>About</button></a>
         <a href="{% url 'login' %}"><button>Resource Sections</button></a>
         <a href="{% url 'job_listing' %}"><button>Job Listing</button></a>
@@ -118,7 +117,6 @@
       {% comment %} <div id="filters">
         <button class="btn active" onclick="filterSelection('all')"> Show all</button>
       </div> {% endcomment %}
-    <section>     
     <section>
         <div class="tech-resources">
           
