@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Language Resources</title>
+    <title>Career Development Resources</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
@@ -51,18 +51,18 @@
         display:flex;
         align-items: center;  
         border-radius:2%;
-        font-size:2.5vw;
+        font-size:1.9vw;
       }
       .enclosing-container:hover{
         height: 15vh;
         width:50vw;
         margin-right: 25vw;
         margin-left: 25vw;
-        font-size:2vw;
+        font-size:1.8vw;
       }
       .image-info{
         position: relative;
-        width:30%;
+        width:50vw;
         height:auto;
         bottom: 0px;
         color: white;
@@ -113,7 +113,7 @@
         <a href="{% url 'community_support' %}"><button>Community Support</button></a>{% endcomment %}
       </nav>
       
-      <h3>Language Resources</h3>
+      <h3>Career Development Resources</h3>
       {% comment %} <div id="filters">
         <button class="btn active" onclick="filterSelection('all')"> Show all</button>
       </div> {% endcomment %}
@@ -123,31 +123,31 @@
             <div class="enclosing-container">
               {% comment %} <img
               src="{% static 'core/resources/freecodecamp-seeklogo.png' %}"
-              alt="Freecodecamp"
+              alt="Grow with Google"
               />                 {% endcomment %}
-              <div class="image-info"><a  target="_blank" href="https://www.duolingo.com/">Duolingo</a></div>
+              <div class="image-info"><a href="https://grow.google/intl/ssa-en/courses-and-tools/?category=career">Grow with Google</a></div>
             </div>
             <div class="enclosing-container">
               {% comment %} <img
               src="{% static 'core/resources/sololearn-seeklogo.png' %}"
-              alt="Sololearn"
+              alt="Coursera Career Academy"
               />               {% endcomment %}
-              <div class="image-info"><a href="https://uk.babbel.com/">Babbel</a></div>
+              <div class="image-info"><a href="https://www.coursera.org/career-academy?utm_medium=sem&utm_source=gg&utm_campaign=b2c_emea__coursera_ftcof_career-academy_arte_april_24_dr_geo-sa_pmax_gads_lg-all&campaignid=21182638940&adgroupid=&device=c&keyword=&matchtype=&network=x&devicemodel=&adposition=&creativeid=&hide_mobile_promo&gad_source=1&gclid=CjwKCAjwlbu2BhA3EiwA3yXyuyrKKSFaz--9zPgzMHHtmWrQEnrg1UxG3XrOM8ZdrzCc3Wq3L_FpYhoCYIcQAvD_BwE">Coursera Career Academy</a></div>
             </div>
             <div class="enclosing-container">
               {% comment %} <img
               src="{% static 'core/resources/codecademy-icon.png' %}"
-              alt="Code Academy"
+              alt="CareerOneStop"
               />                             {% endcomment %}
-              <div class="image-info"><a href="https://www.memrise.com/">Memrise</a></div>
+              <div class="image-info"><a href="https://www.careeronestop.org/">CareerOneStop</a></div>
           </div>
 
           <div class="enclosing-container">
             {% comment %} <img
             src="{% static 'core\resources\programiz-seeklogo.png' %}"
-            alt="Programiz"
+            alt="Mind Tools"
             /> {% endcomment %}
-            <div class="image-info"><a href="https://www.clozemaster.com/about">Clozemaster</a></div>
+            <div class="image-info"><a href="https://www.mindtools.com/c968lms/career-skills">Mind Tools</a></div>
         </div>
 
     </body>

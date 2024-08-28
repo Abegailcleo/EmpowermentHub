@@ -38,26 +38,27 @@ def educational_resource(request):
 def tech_educational_resources(request):
     return render(request, 'core/tech-educational-resources.html')
 
-
 def language_educational_resources(request):
     return render(request, 'core/language-educational-resources.html')
-
 
 def arts_and_crafts_educational_resources(request):
     return render(request, 'core/arts-and-crafts-educational-resources.html')
 
+def business_and_economics_resources(request):
+    return render(request, 'core/business-and-economics-resources.html')
 
-def financial_assistance(request):
-    return render(request, 'core/financial_assistance.html')
+def health_and_wellness_resources(request):
+    return render(request, 'core/health-and-wellness-resources.html')
 
+def career_development_resource(request):
+    return render(request, 'core/career-development-resource.html')
+
+# Community Support
 def community_support(request):
     return render(request, 'core/community_support.html')
 
-
-# Community Support
 def mentorship(request):
     return render(request, 'core/mentorship.html')
-
 
 def community_forum(request):
     return render(request, 'core/community-forum.html')
@@ -66,6 +67,9 @@ def community_forum(request):
 def mental_health_resources(request):
     return render(request, 'core/mental-health-resources.html')
 
+
+def financial_assistance(request):
+    return render(request, 'core/financial_assistance.html')
 
 def login(request):
       if request.method == 'POST':
@@ -122,7 +126,6 @@ class EducationalResourceViewSet(viewsets.ModelViewSet):
     ordering_fields = ['title']
 
 # Educational Resources
-
 class TechEducationalResourcesResourceViewSet(viewsets.ModelViewSet):
     queryset = TechEducationalResource.objects.all()
     serializer_class = TechEducationalResourceSerializer
@@ -150,14 +153,33 @@ class ArtsAndCraftsEducationalResourcesResourceViewSet(viewsets.ModelViewSet):
     ordering_fields = ['title']
 
 
-class FinancialAssistanceViewSet(viewsets.ModelViewSet):
-    queryset = FinancialAssistance.objects.all()
-    serializer_class = FinancialAssistanceSerializer
+class BusinessAndEconomicsResourcesViewSet(viewsets.ModelViewSet):
+    queryset = BusinessAndEconomicsResources.objects.all()
+    serializer_class = BusinessAndEconomicsResourcesSerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
     filterset_fields = ['title']
     search_fields = ['title', 'description']
     ordering_fields = ['title']
 
+
+class HealthAndWellnessResourcesViewSet(viewsets.ModelViewSet):
+    queryset = HealthAndWellnessResources.objects.all()
+    serializer_class = HealthAndWellnessResourcesSerializer
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_fields = ['title']
+    search_fields = ['title', 'description']
+    ordering_fields = ['title']
+
+
+class CareerDevelopmentResourcesViewSet(viewsets.ModelViewSet):
+    queryset = CareerDevelopmentResources.objects.all()
+    serializer_class = CareerDevelopmentResourcesSerializer
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_fields = ['title']
+    search_fields = ['title', 'description']
+    ordering_fields = ['title']
+
+# Community Support
 class CommunitySupportViewSet(viewsets.ModelViewSet):
     queryset = CommunitySupport.objects.all()
     serializer_class = CommunitySupportSerializer
@@ -166,7 +188,6 @@ class CommunitySupportViewSet(viewsets.ModelViewSet):
     search_fields = ['title', 'description']
     ordering_fields = ['title']
 
-# Community Support
 class MentorshipViewSet(viewsets.ModelViewSet):
     queryset = Mentorship.objects.all()
     serializer_class = MentorshipSerializer
@@ -193,6 +214,14 @@ class MentalHealthResourcesViewSet(viewsets.ModelViewSet):
     search_fields = ['title', 'description']
     ordering_fields = ['title']
 
+
+class FinancialAssistanceViewSet(viewsets.ModelViewSet):
+    queryset = FinancialAssistance.objects.all()
+    serializer_class = FinancialAssistanceSerializer
+    filter_backends = [DjangoFilterBackend, filters.SearchFilter, filters.OrderingFilter]
+    filterset_fields = ['title']
+    search_fields = ['title', 'description']
+    ordering_fields = ['title']
 
 class UserViewSet(viewsets.ModelViewSet):
     queryset = User.objects.all()

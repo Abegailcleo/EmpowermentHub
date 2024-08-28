@@ -1,10 +1,14 @@
+
+
+
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Language Resources</title>
+    <title>Arts and Crafts Learning Resources</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
@@ -19,7 +23,7 @@
         background-color: rgba(205, 254, 194, .4);
         position: relative;
       }  
-      .language-resources{
+      .art-resources{
         margin-top:5vh;
         margin-bottom:10vh;
         margin-right: 1vw;
@@ -27,7 +31,7 @@
         height: auto;
         width:80vw;
       }
-      .language-resources img{
+      .art-resources img{
         height: 10vh;
         width: 15vw;
         max-width:50vw;
@@ -35,7 +39,7 @@
         margin-left: 5vw;
         margin-right: 2vw;
       }
-      {% comment %} .language-resources img:hover{
+      {% comment %} .art-resources img:hover{
         height: 40vh;
         font-size:20px;
       } {% endcomment %}
@@ -62,6 +66,27 @@
       }
       .image-info{
         position: relative;
+        width:50vw;
+        height:auto;
+        bottom: 0px;
+        color: white;
+        padding-left: 22px;
+        padding-right: 22px;
+        opacity:0.8;
+        margin-right:5vw;
+        align-items: center;  
+      }
+      .image-info-multiple{
+        position:relative;
+        height: 20vh;
+        display:flex;
+        align-items: center;  
+        border-radius:2%;
+      }
+
+      
+      {% comment %} .image-info{
+        position: relative;
         width:30%;
         height:auto;
         bottom: 0px;
@@ -70,7 +95,22 @@
         padding-right: 22px;
         opacity:0.8;
         margin-right:5vw;
+      }.image-info-multiple{
+        position:relative;
+        width: 30vw;
+        height: 20vh;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+        background-color:rgba(140, 57, 158, 0.2);
+        display:flex;
+        align-items: center;  
+        border-radius:2%;
+        font-size:1vw;
       }
+      .image-info-multiple:hover{
+        height: 15vh;
+        width:20vw;
+        font-size:0.8vw;
+      } {% endcomment %}
       h3 {
         text-align: center;
         margin-top: 1vh;
@@ -113,41 +153,48 @@
         <a href="{% url 'community_support' %}"><button>Community Support</button></a>{% endcomment %}
       </nav>
       
-      <h3>Language Resources</h3>
+      <h3>Arts and Crafts Resources</h3>
       {% comment %} <div id="filters">
         <button class="btn active" onclick="filterSelection('all')"> Show all</button>
       </div> {% endcomment %}
     <section>
-        <div class="language-resources">
+        <div class="art-resources">
           
             <div class="enclosing-container">
               {% comment %} <img
               src="{% static 'core/resources/freecodecamp-seeklogo.png' %}"
-              alt="Freecodecamp"
+              alt="Skillshare"
               />                 {% endcomment %}
-              <div class="image-info"><a  target="_blank" href="https://www.duolingo.com/">Duolingo</a></div>
+              <div class="image-info"><a href="https://www.skillshare.com/en/?gad_source=1&clickid=WBs3oXVFyxyPWByTwQ0Q9RPIUkC1jcwVvVIDWA0&irgwc=1&utm_content=4650&utm_term=Admitad%20269814&utm_campaign=269814&affiliateRef=6595003&utm_medium=affiliate-referral&utm_source=IR&coupon=AFF30D23&ir_partnerid=269814&ir_adid=709001&ir_campaignid=4650
+">Skillshare</a></div>
             </div>
             <div class="enclosing-container">
               {% comment %} <img
               src="{% static 'core/resources/sololearn-seeklogo.png' %}"
-              alt="Sololearn"
-              />               {% endcomment %}
-              <div class="image-info"><a href="https://uk.babbel.com/">Babbel</a></div>
+              alt="Youtube"
+              />              <i class="fa-brands fa-youtube"></i> {% endcomment %}
+              <div class="image-info-multiple"> <h2>Youtube</h2>
+                <ul>                    
+                    <li><a href="https://www.youtube.com/@cbugstudio">Creativebug Studios</a></li>
+                    <li><a href="https://www.youtube.com/@artforkidshub">Art for kids hub</a> </li>
+                    <li><a href="https://www.youtube.com/@TheArtSherpa">theartsherpa</a> </li>
+                </ul>
+            </div>
             </div>
             <div class="enclosing-container">
               {% comment %} <img
               src="{% static 'core/resources/codecademy-icon.png' %}"
-              alt="Code Academy"
+              alt="Khan Academy"
               />                             {% endcomment %}
-              <div class="image-info"><a href="https://www.memrise.com/">Memrise</a></div>
+              <div class="image-info"><a href="https://www.khanacademy.org/partner-content/pixar">Khan Academy</a></div>
           </div>
 
           <div class="enclosing-container">
             {% comment %} <img
             src="{% static 'core\resources\programiz-seeklogo.png' %}"
-            alt="Programiz"
+            alt="Art Prof"
             /> {% endcomment %}
-            <div class="image-info"><a href="https://www.clozemaster.com/about">Clozemaster</a></div>
+            <div class="image-info"><a href="https://artprof.org/">Art Prof</a></div>
         </div>
 
     </body>

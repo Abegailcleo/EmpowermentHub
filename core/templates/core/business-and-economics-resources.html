@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Language Resources</title>
+    <title>Business & Economics Resources</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
@@ -51,18 +51,18 @@
         display:flex;
         align-items: center;  
         border-radius:2%;
-        font-size:2.5vw;
+        font-size:2vw;
       }
       .enclosing-container:hover{
         height: 15vh;
         width:50vw;
         margin-right: 25vw;
         margin-left: 25vw;
-        font-size:2vw;
+        font-size:1.8vw;
       }
       .image-info{
         position: relative;
-        width:30%;
+        width:50vw;
         height:auto;
         bottom: 0px;
         color: white;
@@ -113,7 +113,7 @@
         <a href="{% url 'community_support' %}"><button>Community Support</button></a>{% endcomment %}
       </nav>
       
-      <h3>Language Resources</h3>
+      <h3>Business & Economics Resources</h3>
       {% comment %} <div id="filters">
         <button class="btn active" onclick="filterSelection('all')"> Show all</button>
       </div> {% endcomment %}
@@ -123,31 +123,31 @@
             <div class="enclosing-container">
               {% comment %} <img
               src="{% static 'core/resources/freecodecamp-seeklogo.png' %}"
-              alt="Freecodecamp"
+              alt="Grow with Google"
               />                 {% endcomment %}
-              <div class="image-info"><a  target="_blank" href="https://www.duolingo.com/">Duolingo</a></div>
+              <div class="image-info"><a href="https://grow.google/intl/ssa-en/courses-and-tools/?category=business">Grow with Google</a></div>
             </div>
             <div class="enclosing-container">
-              {% comment %} <img
-              src="{% static 'core/resources/sololearn-seeklogo.png' %}"
-              alt="Sololearn"
-              />               {% endcomment %}
-              <div class="image-info"><a href="https://uk.babbel.com/">Babbel</a></div>
-            </div>
+                {% comment %} <img
+                src="{% static 'core/resources/sololearn-seeklogo.png' %}"
+                alt="SARB Educational Resources"
+                />               {% endcomment %}
+                <div class="image-info"><a href="https://www.resbank.co.za/en/home/what-we-do/banknotes-and-coin/resources">SARB Educational Resources</a></div>
+              </div>
             <div class="enclosing-container">
               {% comment %} <img
               src="{% static 'core/resources/codecademy-icon.png' %}"
-              alt="Code Academy"
+              alt="AllAfrica - Business and Economics"
               />                             {% endcomment %}
-              <div class="image-info"><a href="https://www.memrise.com/">Memrise</a></div>
+              <div class="image-info"><a href="https://allafrica.com/business/">AllAfrica - Business and Economics</a></div>
           </div>
 
           <div class="enclosing-container">
             {% comment %} <img
             src="{% static 'core\resources\programiz-seeklogo.png' %}"
-            alt="Programiz"
+            alt="MyBroadband business"
             /> {% endcomment %}
-            <div class="image-info"><a href="https://www.clozemaster.com/about">Clozemaster</a></div>
+            <div class="image-info"><a href="https://business.mybroadband.co.za/">MyBroadband business</a></div>
         </div>
 
     </body>

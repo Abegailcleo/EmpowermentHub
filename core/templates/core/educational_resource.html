@@ -68,7 +68,7 @@
     
     .scroll-arrow {
       position: absolute;
-      bottom: 70vh;
+      bottom: 50vh;
       background-color: rgba(108, 117, 125, .5);
       color: #fff;
       padding: 10px;
@@ -81,16 +81,20 @@
     }
     .scroll-arrow.right {
       right: 0.5vw;
-      {% comment %} transform: rotate(45deg); {% endcomment %}
     }
     
     .scroll-arrow.left {
       left: 0.5vw;
-      {% comment %} transform: rotate(-135deg); {% endcomment %}
+    }
+    .scroll-arrow:hover {
+      display: flex; 
+      justify-content: center;
+      width:5.3vw;
+      height:6.3vh;
+      font-size:2.3vw;
     }
       .educational-resources{
         overflow-x: auto;
-        {% comment %} -ms-overflow-style: none;  {% endcomment %}
         scrollbar-width: none; 
         scroll-behavior: smooth; 
         margin-top:5vh;
@@ -120,9 +124,10 @@
         background-color: rgba(108, 117, 125, .3);
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
         align-items: center;  
+        font-size:14px;
       }
       .enclosing-container:hover{
-        height:18vw;
+        width: 15vw;
       }
       .image-info{
         position: absolute;
@@ -133,12 +138,14 @@
         color: white;
         padding-left: 22px;
         padding-right: 22px;
-        font-size:14px;
         border-bottom-left-radius: 11%;
         border-bottom-right-radius: 11%;
       }
       .image-info a{
         color:rgb(108, 117, 125);
+      }
+      .image-info:hover {
+        width:11.6vw;
       }
       .container {
         max-width: 80vw;
@@ -154,8 +161,15 @@
         margin-top: 1vh;
         font-family: "Roboto", sans-serif;
         font-size:5vw;
+        margin-bottom:3vh;
       }
-      
+      h4 {
+        text-align: center;
+        {% comment %} margin-top: 1vh; {% endcomment %}
+        font-family: "Roboto", sans-serif;
+        font-size:2vw;
+        margin-bottom:10vh;
+      }
       .navigation {
         {% comment %} display: flex;
         justify-content: center; 
@@ -178,13 +192,7 @@
         max-width:3vw;
         font-size:2.5vw;
       }
-      .scroll-arrow:hover {
-        display: flex; 
-        justify-content: center;
-        width:5.3vw;
-        height:6.3vh;
-        font-size:2.3vw;
-      }
+
 
       .search-container button {
         background-color: #6c757d;
@@ -242,13 +250,13 @@
         <a href="{% url 'community_support' %}">Community Support</a>{% endcomment %}
       </nav>
       <h3>Educational Resources</h3>
+      <h4>We've done our best to compile an array of free educational resources that you can use to grow. Feel free to contact us if you have any requests.</h4>
     <div class="search-container">
         <form action="/action_page.php">
         <input type="text" placeholder="Search.." name="search">
         <button type="submit"><i class="fa fa-search"></i></button>
         </form>
     </div>
-    <section>     
     <section>
         <div class="educational-resources">
           
@@ -264,17 +272,17 @@
               src="{% static 'core/resources/language-educational-image.png' %}"
               alt="Educational Resources: Learn a language"
               />
-              {% comment %} <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Languages</a><br>Communicate in a different language.</div> {% endcomment %}
+              {% comment %} <div class="image-info"><a href="#" class="track-link">Languages</a><br>Communicate in a different language.</div> {% endcomment %}
 
-              <div class="image-info"><a href="#" class="track-link">Languages</a><br>Communicate in a different language.</div>
+              <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Languages</a><br>Communicate in a different language.</div>
           </div>
           <div class="enclosing-container">
             <img
             src="{% static 'core/resources/arts&crafts-educational-image.png' %}"
             alt="Educational Resources: Art"
             />
-            {% comment %} <div class="image-info"><a href="{% url 'arts_and_crafts_educational_resources' %}" class="track-link">Arts & Crafts</a><br>Explore your creativity.</div> {% endcomment %}
-            <div class="image-info"><a href="#" class="track-link">Arts & Crafts</a><br>Explore your creativity.</div>
+            <div class="image-info"><a href="{% url 'arts_and_crafts_educational_resources' %}" class="track-link">Arts & Crafts</a><br>Explore your creativity.</div>
+            {% comment %} <div class="image-info"><a href="#" class="track-link">Arts & Crafts</a><br>Explore your creativity.</div> {% endcomment %}
           </div>
           
           <div class="enclosing-container">
@@ -282,30 +290,30 @@
             src="{% static 'core/resources/business-and-economics.png' %}"
             alt="Business and Economics: Learn business and Economics"
             />
-            {% comment %} <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Business and Economics</a><br>Increase your business knowledge.</div> {% endcomment %}
-            <div class="image-info"><a href="#" class="track-link">Business and Economics</a><br>Increase your business knowledge.</div>
+            <div class="image-info"><a href="{% url 'business_and_economics_resources' %}" class="track-link">Business and Economics</a><br>Increase your business knowledge.</div>
+            {% comment %} <div class="image-info"><a href="#" class="track-link">Business and Economics</a><br>Increase your business knowledge.</div> {% endcomment %}
           </div>
         <div class="enclosing-container">
           <img
           src="{% static 'core/resources/health-and-wellness.png' %}"
           alt="Educational Resources: Health"
           />
-          {% comment %} <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Health and Wellness</a><br>Embark on a path to a healthier happier you.</div> {% endcomment %}
-          <div class="image-info"><a href="#" class="track-link">Health and Wellness</a><br>Embark on a path to a healthier happier you.</div>
-
+          <div class="image-info"><a href="{% url 'health_and_wellness_resources' %}" class="track-link">Health and Wellness</a><br>Embark on a path to a healthier happier you.</div>
+          {% comment %} <div class="image-info"><a href="#" class="track-link">Health and Wellness</a><br>Embark on a path to a healthier happier you.</div> {% endcomment %}
         </div>
       <div class="enclosing-container">
         <img
         src="{% static 'core/resources/career-development.png' %}"
         alt="Educational Resources: Career Development"
         />
-        {% comment %} <div class="image-info"><a href="{% url 'language_educational_resources' %}" class="track-link">Career Development</a><br>Grow your career.</div> {% endcomment %}
-
-        <div class="image-info"><a href="#" class="track-link">Career Development</a><br>Grow your career.</div>
+        <div class="image-info"><a href="{% url 'career_development_resources' %}" class="track-link">Career Development</a><br>Grow your career.</div>
+        {% comment %} <div class="image-info"><a href="#" class="track-link">Career Development</a><br>Grow your career.</div> {% endcomment %}
     </div>
-    <button  class="scroll-arrow left" onclick="scrollLeft()"><</button>
-
-    <button class="scroll-arrow right" onclick="scrollRight()">></button>          
+    
+    <button class="scroll-arrow left" onclick="scrollLeft()">&#x276E;</button>
+    <button class="scroll-arrow right" onclick="scrollRight()">&#x276F;</button>
+    {% comment %} <button  class="scroll-arrow left" onclick="scrollLeft()"><</button>
+    <button class="scroll-arrow right" onclick="scrollRight()">></button>           {% endcomment %}
     </section>
 
 
@@ -317,6 +325,9 @@
     </div>
     </section>
     <script>
+ 
+
+
       function scrollRight() {
         const container = document.querySelector('.educational-resources');
         
@@ -334,7 +345,7 @@
           left: -100,
           behavior: 'smooth'
         });
-      }
+      } {% comment %} {% endcomment %}
       
       function addRecentLink(url, title) {
         const linkList = document.getElementById('recents-list');
@@ -356,6 +367,7 @@ function saveRecentLink(url, title) {
 }
 
 function loadRecentLinks() {
+  // localStorage.removeItem('recentLinks') 
   let recentLinks = JSON.parse(localStorage.getItem('recentLinks')) || [];
   recentLinks.forEach(link => addRecentLink(link.url, link.title));
 }

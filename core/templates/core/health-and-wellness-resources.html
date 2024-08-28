@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Language Resources</title>
+    <title>Health & Wellness Resources</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500;700&display=swap"
       rel="stylesheet"
@@ -51,18 +51,18 @@
         display:flex;
         align-items: center;  
         border-radius:2%;
-        font-size:2.5vw;
+        font-size:1.9vw;
       }
       .enclosing-container:hover{
         height: 15vh;
         width:50vw;
         margin-right: 25vw;
         margin-left: 25vw;
-        font-size:2vw;
+        font-size:1.8vw;
       }
       .image-info{
         position: relative;
-        width:30%;
+        width:50vw;
         height:auto;
         bottom: 0px;
         color: white;
@@ -113,42 +113,44 @@
         <a href="{% url 'community_support' %}"><button>Community Support</button></a>{% endcomment %}
       </nav>
       
-      <h3>Language Resources</h3>
+      <h3>Health & Wellness Resources</h3>
       {% comment %} <div id="filters">
         <button class="btn active" onclick="filterSelection('all')"> Show all</button>
       </div> {% endcomment %}
     <section>
         <div class="language-resources">
           
-            <div class="enclosing-container">
-              {% comment %} <img
-              src="{% static 'core/resources/freecodecamp-seeklogo.png' %}"
-              alt="Freecodecamp"
-              />                 {% endcomment %}
-              <div class="image-info"><a  target="_blank" href="https://www.duolingo.com/">Duolingo</a></div>
-            </div>
+
+            
             <div class="enclosing-container">
               {% comment %} <img
               src="{% static 'core/resources/sololearn-seeklogo.png' %}"
-              alt="Sololearn"
+              alt="SARB Educational Resources"
               />               {% endcomment %}
-              <div class="image-info"><a href="https://uk.babbel.com/">Babbel</a></div>
+              <div class="image-info"><a href="https://www.westerncape.gov.za/service/home-community-based-care#:~:text=The%20Integrated%20Health%20and%20Wellness%20Package%20in%20the%20Community%20is%20a%20comprehensive%20and%20integrated%20one%20which%20includes%20Community%20Based%20Services%20%28CBS%29%20and%20Wellness%20Services.%20The%20package%20includes%20health%20and%20wellness%20interventions%20%28ranging%20from%20prevention%2C%20promotion%2C%20cure%2C%20rehabilitation%2C%20and%20palliation%29%2C%20aiming%20to%20empower%20clients%20and%20primary%20caregivers%20to%20look%20after%20their%20health%20at%20home.%20The%20Health%20and%20Wellness%20Package%20helps%20to%20reduce%20the%20demand%20on%20healthcare%20facilities%20by%20avoiding%20admission%2C%20providing%20home%2Dbased%20care%20for,components%20include%3A">Community Based Services (CBS) and Wellness Services</a></div>
             </div>
             <div class="enclosing-container">
               {% comment %} <img
               src="{% static 'core/resources/codecademy-icon.png' %}"
-              alt="Code Academy"
+              alt=" MomConnect"
               />                             {% endcomment %}
-              <div class="image-info"><a href="https://www.memrise.com/">Memrise</a></div>
+              <div class="image-info"><a href="https://www.health.gov.za/momconnect/"> MomConnect</a></div>
           </div>
 
           <div class="enclosing-container">
             {% comment %} <img
             src="{% static 'core\resources\programiz-seeklogo.png' %}"
-            alt="Programiz"
+            alt="Thutong Education Portal"
             /> {% endcomment %}
-            <div class="image-info"><a href="https://www.clozemaster.com/about">Clozemaster</a></div>
+            <div class="image-info"><a href="https://www.thutong.doe.gov.za/">Thutong Education Portal</a></div>
         </div>
+        <div class="enclosing-container">
+            {% comment %} <img
+            src="{% static 'core/resources/freecodecamp-seeklogo.png' %}"
+            alt="Open University"
+            />                 {% endcomment %}
+            <div class="image-info"><a href="https://www.open.ac.uk/">Open University</a></div>
+          </div>
 
     </body>
 </html>

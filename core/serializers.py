@@ -14,7 +14,6 @@ class EducationalResourceSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 # Educational Resources Serializers
-
 class TechEducationalResourceSerializer(serializers.ModelSerializer):
     class Meta:
         model = TechEducationalResource
@@ -32,18 +31,28 @@ class ArtsAndCraftsEducationalResourceSerializer(serializers.ModelSerializer):
         model = ArtsAndCraftsEducationalResource
         fields = '__all__'
 
-
-class FinancialAssistanceSerializer(serializers.ModelSerializer):
+class BusinessAndEconomicsResourcesSerializer(serializers.ModelSerializer):
     class Meta:
-        model = FinancialAssistance
+        model = BusinessAndEconomicsResources
         fields = '__all__'
 
+class HealthAndWellnessResourcesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = HealthAndWellnessResources
+        fields = '__all__'
+
+class CareerDevelopmentResourcesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CareerDevelopmentResources
+        fields = '__all__'
+
+
+
+# Community Support Serializers
 class CommunitySupportSerializer(serializers.ModelSerializer):
     class Meta:
         model = CommunitySupport
         fields = '__all__'
-
-# Community Support Serializers
 
 class MentorshipSerializer(serializers.ModelSerializer):
     class Meta:
@@ -62,6 +71,11 @@ class MentalHealthResourcesSerializer(serializers.ModelSerializer):
         model = MentalHealthResources
         fields = '__all__'
 
+
+class FinancialAssistanceSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = FinancialAssistance
+        fields = '__all__'
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
